@@ -1,0 +1,235 @@
+/*additional styling for more specific rules outside of bootstrap.min.css
+provides base styles for each page and then specific items for individual pages
+outside of resources.html. Responsive design is taken care of with bootstrap.css
+*/
+
+/*base styles for each page*/	
+body {
+	background-color: white;
+	font-family: "Open Sans",sans-serif;
+	font-size: 12px;
+	height: 100%;
+	color: #666;
+	min-width: 375px;
+}
+
+.navbar-default .navbar-brand {
+  color: white;
+}
+
+.navbar{
+	background-color: #0083d5;
+	color: white;
+	margin-bottom: 0px;
+	border: 0px
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: white;
+}
+
+.navbar-default,.navbar-text {
+  text-align: right;
+  font-family: "Open Sans",sans-serif;
+  color: #fff;
+  font-weight: bold;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0px 15px;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.43);
+}
+
+/*uses google font downloaded on html document for Open Sans*/	
+header h1{
+  font-size: 48px;
+  font-family: 'Patua One', cursive;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1;
+  text-shadow:
+    3px 3px 0 #000,
+    /* Simulated effect for Firefox and Opera
+       and nice enhancement for WebKit */
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+   -1px  1px 0 #000,
+    1px  1px 0 #000;
+	color: white;
+	margin: 0;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+input[type = "text"], input[type="password"], input[type ="submit"],input[type = "number"],select{
+   font-family: "Open Sans",sans-serif;
+  height: 40px;
+  width: 100%;
+  margin: 0 0 10px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 1px solid #c3c2c2;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  transition: border linear .2s,box-shadow linear .2s;
+  min-width: 40px;
+  padding: 0 6px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #555555;
+  border-radius: 4px;
+  }
+  
+  input[type = "submit"],button{
+	background: #ff8714;
+	font-size: 16px;
+	padding: 9px 18px;
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+  }
+
+ h2 {
+  font: 24px/16px "Open Sans",sans-serif;
+  text-transform: uppercase;
+  color: #444444;
+  font-weight: 600;
+  line-height: normal;
+}
+
+footer {
+	box-sizing: border-box;
+	display: block;
+	background-color: #25292C;
+	color: white;
+	min-height: 60px;
+	padding-top: 5px;
+}
+
+.footer-inside {
+	text-align: center;
+	margin: 0;
+	line-height: 50px;
+}
+
+a >.fa-trophy{
+	color: white;
+}
+
+label {
+	font-size: 16px;
+}
+  /*end of base styles*/
+ 
+ /*.landing used for forms specifically on the index.html and calorie.html page*/
+.landing {
+	background-color: rgba(17,17,17,0.75);
+	padding: 1em;
+	text-align: center;
+	color: white;
+	  border: 1px solid #000;
+	border-radius: 8px;
+	margin: 10px auto;
+	width: 325px;
+  font-family: "Open Sans",sans-serif;
+}
+
+ 
+ /*specific styles for index.html*/
+#main-body {
+	font-family: "Open Sans",sans-serif;
+	font-size: 12px;
+	color: #666;
+	background-image: url("../images/greenbeans.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	padding-bottom: 20px;
+	margin: 0;
+}
+
+#user-login {
+	font-family: "Open Sans",sans-serif;
+	font-size: 12px;
+	color: #666;
+	background-image: url("../images/mountain.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	padding-bottom: 20px;
+	margin: 0;
+	min-height: 500px;
+}
+
+.landing-login {
+	background-color: rgba(17,17,17,0.75);
+	padding: 1em;
+	text-align: center;
+	color: white;
+	  border: 1px solid #000;
+	border-radius: 8px;
+	margin: 10px auto;
+	width: 325px;
+  font-family: "Open Sans",sans-serif;
+  height: 400px;
+}
+
+#landing-login-description{
+	text-align: left;
+	font-size: 14px;
+}
+
+
+ /*used for section above footer on bottom of index.html*/
+#features {
+  min-width: 100%;
+  min-height: 200px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #E9E6E5), color-stop(100%, #EFEEEE));
+	color: #999;
+	padding-bottom: 5px;
+	margin: auto;
+  }
+  
+.feature {
+	text-align: center;
+  }
+
+  
+/*specific styles for calorie.html*/
+  #calories {
+	background-color: #0083d5; 
+	}
+
+
+/*specific styles for dailylog.html*/
+#calendarMain {
+	background-color: white;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+#dailyLogMain{
+	background-color: #0083d5;
+
+}
+
+#calendar {
+	margin: 20px;
+}
+  
+/*specific styles for fitness.html*/
+#main-fitness {
+	font-family: "Open Sans",sans-serif;
+	font-size: 12px;
+	color: #666;
+	background-image: url("../images/barbell.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	padding-bottom: 20px;
+	margin: 0;
+	min-height: 550px;
+}
+
+#workoutVideo {
+	margin-top: 30px;
+}

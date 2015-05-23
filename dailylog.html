@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<!-- dailylog allows user to add, move, delete events to their own personal calendar
+if they are logged in. 
+Fullcalendorio jquery plugin used. (http://fullcalendar.io/)
+ -->
+<html>
+<head>
+        <meta charset="utf-8">
+        <title>Our Nutrtion Buddy</title>
+		<link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<script src='fullcalendar/lib/moment.min.js'></script>
+		<script src='fullcalendar/fullcalendar.js'></script>
+		<link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+		<link rel="stylesheet" type="text/css" href="styles/styles.css">
+		
+</head>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+<!--top navigation bar used for all pages, taken from bootstrap.css and creates a 
+hamburger menu when page is made too small (at break point).-->
+ <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <!--trophy logo taken from font awesome-->
+	  <a class="navbar-brand" href="index.html"><i class="fa fa-trophy fa-2x"></i></a>
+    </div>
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<ul class="nav navbar-nav navbar-right navbar-text">
+		<li id="welcomeLogIn"><a id = "welcome" href="#">Hello Guest</a></li>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="calorie.html">Calorie Counter</a></li>
+        <li><a href="dailylog.html">Daily Log</a></li>
+        <li><a href="fitness.html">Fitness</a></li>
+		<li><a href="resources.html">Resources</a></li>
+	</ul>
+	</div>
+</nav>
+
+<div class="modal fade" id="myloginModal">
+<!--modal login window called when welcome text is clicked.
+allows user to sign in from this screen if they are an existing user-->
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Our Nutrition Buddy</h4>
+      </div>
+      <div class="modal-body">
+        <form id="sign-inModalDaily">
+            <div class= "field">
+                <input id="id_usernameModal" name="id_username" placeholder="Existing User" type="text" />
+            </div>
+			<div class= "field">
+                <input id="id_passwordModal" name="id_password" placeholder="Enter Password" type="password" />
+            </div>
+            <input type="submit" class="cta translate large" value="Log In" id="login_button"/>
+			</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id ="calendarMain">
+<!--containing div to hold calendar div below. The scripts 
+and styles listed below give the calendar it's look and functionality.
+		<script src='fullcalendar/lib/moment.min.js'></script>
+		<script src='fullcalendar/fullcalendar.js'></script>
+		<link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+-->
+<div id="calendar"></div><!--places calendar on screen-->
+</div>
+
+<footer>
+<!--footer uses font-awesome for email icon-->
+        <div class="footer-inside col-sm-6">
+		<span>2015 JavaScript All Rights Reserved. Angela LaFountain & Ryan Roethle<a href="index.html"><i class="fa fa-trophy fa-2x"></i></a></span>
+		</div>
+		<div class="footer-inside col-sm-6">
+            <span>Questions? Email us: <a href="mailto:rroethle@my.wctc.com"><i id="social" class="fa fa-envelope-square fa-3x social-em"></i></a></span>
+		</div>
+</footer>
+</body>
+
+<!-- index.js is loaded so user can log-in from this page -->
+<script src="scripts/index.js"></script>
+<script src="scripts/dailylog.js"></script>
+</html>
+

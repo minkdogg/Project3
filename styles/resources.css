@@ -1,0 +1,58 @@
+/* Additional styles for resources.html 
+the styles.css sheet was getting too long so placed specific styles to the resources.html
+page here. In hindsight, we should have modularized each individual page and used bootstrap and
+styles.css as our base.
+*/
+
+/*creates apple image around text*/
+#first {
+		    background-color: #D00000  ;
+			border: 2px solid;
+			min-height: 600px;
+			border-radius: 36% 36% 41% 41% / 42% 42% 75% 75%;   
+			position: relative;
+			margin: 30px 0px 0px 10px;
+			margin-left: auto;
+			margin-right: auto;
+			width: 60%;
+			text-align: center;
+			box-shadow: 20px 30px 35px #888888;
+			opacity:0.92;
+			min-width: 550px;
+			padding: 15px;
+		}
+
+/*provides background-image to main content of page*/
+#nutrition{
+	background-image: url("http://easylivingmom.com/wp-content/uploads/2013/01/Healthy-Eating-Tips14.jpg");
+	margin: 0;
+	font-family:color: rgba(0,0,0,0.6);
+	text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+                 0px -5px 35px rgba(255,255,255,0.3);
+	font-style: italic;
+	background-color: #CCC;
+	height: 625px;
+	
+}
+
+/*additional styles to the list items and h2 headers specific to resources.html*/
+#first h2 {
+	color: white;
+	text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+                 0px -5px 35px rgba(255,255,255,0.3);
+}
+
+#first li {
+	color: white;
+	text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+                 0px -5px 35px rgba(255,255,255,0.3);
+	list-style-type: none;
+	
+}
+
+ul,li { list-style-type: none;
+        list-style-position:inside;
+        margin:0;
+        padding:0; }
+
+

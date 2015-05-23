@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<!-- Home page for Our Nutrition Buddy-->
+
+<html>
+<head>
+        <meta charset="utf-8">
+        <title>Our Nutrtion Buddy</title>
+		<link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-static-top">
+<!--top navigation bar used for all pages, taken from bootstrap.css and creates a 
+hamburger menu when page is made too small (at break point).-->
+ <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <!--trophy logo taken from font awesome-->
+	  <a class="navbar-brand" href="index.html"><i class="fa fa-trophy fa-2x"></i></a>
+    </div>
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<ul class="nav navbar-nav navbar-right navbar-text">
+		<li id="welcomeLogIn"><a id = "welcome" href="#">Hello Guest</a></li>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="calorie.html">Calorie Counter</a></li>
+        <li><a href="dailylog.html">Daily Log</a></li>
+        <li><a href="fitness.html">Fitness</a></li>
+		<li><a href="resources.html">Resources</a></li>
+	</ul>
+	</div>
+</nav>
+
+<div class="modal fade" id="myloginModal">
+<!--modal login window called when welcome text is clicked.
+allows user to sign in from this screen if they are an existing user-->
+
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Our Nutrition Buddy</h4>
+      </div>
+      <div class="modal-body">
+        <form id="sign-inModal">
+            <div class= "field">
+                <input id="id_usernameModal" name="id_usernameModal" placeholder="Existing User" type="text" />
+            </div>
+			<div class= "field">
+                <input id="id_passwordModal" name="id_passwordModal" placeholder="Enter Password" type="password" />
+            </div>
+            <input type="submit" class="cta translate large" value="Log In" id="login_button"/>
+			</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id = "user-login">
+<!--user-login div is displayed if a user is successful in logging into our site
+this div is hidden if a guest is on our site-->
+<header class = "text-center">
+	<h1>Our Nutrition Buddy</h1>
+	</header>
+	<div class="landing-login">
+	<p class="login_prompt">
+            <h3>Welcome to our site!</h3>
+			<h5>Your journey to a better, more nutrious lifestyle begins now!</h5>
+			<h3>What can you do?</h3>
+			<div id="landing-login-description">
+			<p>Calculate how many calories you burned during your last workout
+			or figure out what your calorie intake should be per day by visiting our
+			<a href="calorie.html">"Calorie Counter"</a> calculator</p>
+			<p>Log your fitness on your own calendar by clicking <a href="dailylog.html">"Daily Log"</a></p>
+			<p>View any one of our many exercise videos by clicking <a href="fitness.html">"Fitness"</a></p>
+			<p>Learn more about nutrition by exploring our <a href="resources.html"> "Resource"</a> page</p>
+			</div>
+        </p>
+	</div>
+</div>
+
+<div id = "main-body">
+<!--main-body is displayed if a guest on our site. If a user logs in, then user-login 
+is displayed-->
+	<header class = "text-center">
+	<h1>Our Nutrition Buddy</h1>
+	</header>
+
+<div class="landing ">
+<!--landing is the center log-in area for the two forms
+text area's have classes assigned to them in case we wanted to
+add formatting easily-->
+    <section id="login" class="main">
+        <p class="login_prompt">
+            If your an existing user, log-in to your account. 
+			If your new, create a username below to start recording your progress!
+        </p>
+		
+        <form id="sign-in">
+		<!--form sign-in lets an existing user sign-in-->
+            <div class= "field">
+                <input id="id_username" name="id_username" placeholder="Existing User" type="text" />
+            </div>
+			<div class= "field">
+                <input id="id_password" name="id_password" placeholder="Enter Password" type="password" />
+            </div>
+            <input type="submit" class="cta translate large" value="Log In" id="login_button"/>
+			</form>
+		
+		<form id="sign-up">
+		<!--form sign-up is where a new user can create an account-->
+            <div class="auth_option_alt">
+                New to Our Nutrition Buddy?&nbsp;&nbsp; Sign Up Below
+            </div>
+			<div class= "field">
+                <input id="id_username_sign_up" name="id_username_sign_up" placeholder="New User" type="text" />
+            </div>
+			<div class= "field">
+                <input id="id_password_sign_up" name="id_password_sign_up" placeholder="New User Password" type="password" />
+            </div>
+			<input type="submit" class="cta translate large" value="Sign Up" id="login_button"/>
+        </form>
+		<div class="auth_option_alt">
+                Don't want to sign-up? That's fine. Feel free to browse as a guest.
+            </div>
+    </section>
+</div>
+</div>
+
+    <div class="row" id="features">
+	<!--features area is divided into 4 columns within a row. Used to explain different
+	sections on site. Class feature is added to each column for formatting purposes-->
+        <div class="feature col-sm-3">
+            <h2>Create a Plan</h2>
+            <p>
+                Have a goal in mind but don't know how to get started. Answer a few questions and we will develop a fitness plan for you.
+            </p>
+            <a href="fitness.html">Get Started</a>
+        </div>
+        <div class="feature col-sm-3">
+            <h2>Calorie Counter</h2>
+            <p>
+                Have a weight you want to reach? See how many calories per day it will take to reach your target goal.
+            </p>
+            <a href="calorie.html">Start Counting</a>
+        </div>
+        <div class="feature col-sm-3">
+            <h2>Log Your Activity</h2>
+            <p>
+                Fitness isn't just an activity, it's a lifestyle. Keep track of what you eat alongside your workouts to get a complete picture of your health.
+            </p>
+            <a href="dailylog.html">Check it out</a>
+        </div>
+        <div class="feature col-sm-3">
+            <h2>Share with Friends</h2>
+            <p>
+                Proud of what you've accomplished? Need some encouragement? Share what you've done or challenge a buddy!
+            </p>
+            <a href="https://www.facebook.com/"><i id="social" class="fa fa-facebook-square fa-3x social-fb"></i></a>
+	        <a href="https://twitter.com/"><i id="social" class="fa fa-twitter-square fa-3x social-tw"></i></a>
+	        <a href="https://plus.google.com/"><i id="social" class="fa fa-google-plus-square fa-3x social-gp"></i></a>
+        </div>
+    </div>
+
+<footer>
+<!--footer uses font-awesome for email icon-->
+        <div class="footer-inside col-sm-6">
+		<span>2015 JavaScript All Rights Reserved. Angela LaFountain & Ryan Roethle<a href="index.html"><i class="fa fa-trophy fa-2x"></i></a></span>
+		</div>
+		<div class="footer-inside col-sm-6">
+            <span>Questions? Email us: <a href="mailto:rroethle@my.wctc.com"><i id="social" class="fa fa-envelope-square fa-3x social-em"></i></a></span>
+		</div>	
+</footer>
+
+	<script src="scripts/index.js"></script>
+	</body>
+</html>
